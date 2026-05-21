@@ -1,0 +1,46 @@
+﻿@model Employee
+
+
+<h1>Welcome to the Home Page</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <form asp-controller="Home" asp-action="Index" method="post">
+                <label asp-for="FirstName" class="fw-bold"  >Enter Employee First Name</label>
+                <input asp-for="FirstName" class="form-control" placeholder="Enter your first name" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <br />
+                <label asp-for="LastName" class="fw-bold"  >Enter Employee Last Name</label>
+                <input asp-for="LastName" class="form-control" placeholder="Enter your last name" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+                <br />
+                <label asp-for="Designation" class="fw-bold"  >Enter Employee Designation</label>
+                <input asp-for="Designation" class="form-control" placeholder="Enter your designation" />
+                <span asp-validation-for="Designation" class="text-danger"></span>
+                <br />
+                <label asp-for="EmailAddress" class="fw-bold"  >Enter Employee Email Address</label>
+                <input asp-for="EmailAddress" class="form-control" placeholder="Enter your email address" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                <br />
+                <label asp-for="MobileNumber" class="fw-bold"  >Enter Employee Mobile Number</label>
+                <input asp-for="MobileNumber" class="form-control" placeholder="Enter your mobile number" />
+                <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                <br />
+                <label asp-for="DateOfBirth" class="fw-bold">Enter Employee Date of Birth</label>
+                <input asp-for="DateOfBirth" class="form-control" placeholder="Enter your date of birth" />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                <br />
+                <label asp-for="EmployeeAge" class="fw-bold"  >Enter Employee Age</label>
+                <input asp-for="EmployeeAge" class="form-control" placeholder="Enter your age" />
+                <span asp-validation-for="EmployeeAge" class="text-danger"></span>
+                <br />
+                <label asp-for="Password" class="fw-bold"  >Enter Employee Password</label>
+                <input asp-for="Password" class="form-control" placeholder="Enter your password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <br />
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+</div>

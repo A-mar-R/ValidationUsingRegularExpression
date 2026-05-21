@@ -1,0 +1,65 @@
+﻿@model Employee
+
+<div class="container mt-5">
+
+    <h1 class="text-center mb-4">Employee Details</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <table class="table table-bordered table-striped table-hover shadow text-center">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Field</th>
+                        <th>Information</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="fw-bold">First Name</td>
+                        <td class="fw-bold">@Model.FirstName</td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-bold">Last Name</td>
+                        <td class="fw-bold">@Model.LastName</td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-bold">Designation</td>
+                        <td class="fw-bold">@Model.Designation</td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-bold">Email Address</td>
+                        <td class="fw-bold">@Model.EmailAddress</td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-bold">Mobile Number</td>
+                        <td class="fw-bold">@Model.MobileNumber</td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-bold">Date of Birth</td>
+                        <td class="fw-bold">@Model.DateOfBirth</td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-bold">Employee Age</td>
+                        <td class="fw-bold">@Model.EmployeeAge</td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-bold">Password</td>
+                        <td class="fw-bold">@Model.Password</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
