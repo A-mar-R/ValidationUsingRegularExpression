@@ -5,6 +5,7 @@ namespace ValidationUsingRegularExpression.Models
     public class Employee
     {
         [Required(ErrorMessage = "First Name is required.")]
+        [MaxLength(15)]
         public string?  FirstName { get; set; }
         [Required(ErrorMessage = "Last Name is required.")] 
         public string? LastName { get; set; }
@@ -28,5 +29,13 @@ namespace ValidationUsingRegularExpression.Models
         [Required(ErrorMessage = "Password is required.")]
         [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$", ErrorMessage = "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.")]
         public string? Password { get; set; }
+
+        [Required(ErrorMessage = "Confirm Password is required.")]
+        [Compare("Password", ErrorMessage = "Passwords do not match.")]
+        public string? ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "URL is required.")]
+        [Url(ErrorMessage = "Invalid URL format.")]
+        public string? Url { get; set; }
     }
 }

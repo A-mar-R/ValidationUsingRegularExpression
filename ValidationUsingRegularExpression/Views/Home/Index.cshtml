@@ -1,11 +1,12 @@
 ﻿@model Employee
 
 
-<h1>Welcome to the Home Page</h1>
+
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5">
+            <h2 class="text-center mb-4">Employee Registration Form</h2>
             <form asp-controller="Home" asp-action="Index" method="post">
                 <label asp-for="FirstName" class="fw-bold"  >Enter Employee First Name</label>
                 <input asp-for="FirstName" class="form-control" placeholder="Enter your first name" />
@@ -38,6 +39,14 @@
                 <label asp-for="Password" class="fw-bold"  >Enter Employee Password</label>
                 <input asp-for="Password" class="form-control" placeholder="Enter your password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
+                <br />
+                <label asp-for="ConfirmPassword" class="fw-bold"  >Confirm Employee Password</label>
+                <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm your password" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                <br />
+                <label asp-for="Url" class="fw-bold"  >Enter Employee URL</label>
+                <input asp-for="Url" class="form-control" placeholder="Enter your URL" />
+                <span asp-validation-for="Url" class="text-danger"></span>
                 <br />
                 <input type="submit" value="Submit" class="btn btn-primary" />
             </form>
