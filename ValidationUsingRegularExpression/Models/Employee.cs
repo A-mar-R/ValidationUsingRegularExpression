@@ -18,7 +18,7 @@ namespace ValidationUsingRegularExpression.Models
         
         [Required(ErrorMessage = "Mobile Number is required.")]
         [RegularExpression("^[0-9]{10}$", ErrorMessage = "Mobile number must be exactly 10 digits.")]
-        public long MobileNumber { get; set; }
+        public long? MobileNumber { get; set; }
         [Required(ErrorMessage = "Age is required.")]
         public int? EmployeeAge { get; set; }
 
